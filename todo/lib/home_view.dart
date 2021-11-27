@@ -33,17 +33,27 @@ class HomeView extends StatelessWidget   {
      ), 
       ),
   ),
-  body: Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: const[
-      Text("Charles"),
-     CircleAvatar(radius:30,backgroundImage:AssetImage('assets/images/whatsapp.png'))
-    ],
-    
-  )
- 
-  
-      );
+  body:ListView.separated(
+    itemBuilder:(BuildContext context, int index){
+        return const ListTile(
+          leading:CircleAvatar(
+          radius:25.0,
+          backgroundImage: AssetImage('assets/images/Charles.png')
+          ),
+          title:Text('Charles Ewudzie'),
+          subtitle:Text("I'm so happy!"),
+          trailing:Icon(Icons.favorite,color:Colors.black,size:20,)
+
+
+        );
+      },
+     separatorBuilder:(BuildContext context,int index){
+       return const SizedBox(
+         height:20,
+       );
+     },
+     itemCount:15),
+  );
   }
 
 }
