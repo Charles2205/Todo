@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Todo App',
       theme: ThemeData(
         // This is the theme of your application.
-        primarySwatch: Colors.amber,
+        // primarySwatch: Colors.amber,
       ),
       home: const HomeView(),
     );
