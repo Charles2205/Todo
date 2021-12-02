@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:todo/home_view.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:todo/views/home_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TodoApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class TodoApp extends StatelessWidget {
+  const TodoApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -15,11 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Todo App',
       theme: ThemeData(
-        // This is the theme of your application.
-        // primarySwatch: Colors.amber,
+        primarySwatch: Colors.pink,
+        primaryColor: Colors.blueGrey[100],
       ),
       home: const HomeView(),
     );
   }
 }
-
